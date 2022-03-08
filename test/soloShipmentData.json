@@ -1,0 +1,98 @@
+[
+  {
+    "shipmentId": 990,
+    "vehicle": "rail",
+    "packages": [
+      {
+        "packageId": 1,
+        "supplier": "Fiveclub",
+        "buyer": "Edgeblab",
+        "contents": { "type": "Vinyl", "quantity": 19 },
+        "origin": "Wuxing",
+        "destination": "Tabon",
+        "distance": 3409
+      },
+      {
+        "packageId": 2,
+        "supplier": "Kazu",
+        "buyer": "Rooxo",
+        "contents": { "type": "Brass", "quantity": 7 },
+        "origin": "Solo",
+        "destination": "Kos",
+        "distance": 3247
+      },
+      {
+        "packageId": 3,
+        "supplier": "Gabtune",
+        "buyer": "Yakidoo",
+        "contents": { "type": "Glass", "quantity": 51 },
+        "origin": "Kantharalak",
+        "destination": "Ashchysay",
+        "distance": 355
+      },
+      {
+        "packageId": 4,
+        "supplier": "Wikibox",
+        "buyer": "Muxo",
+        "contents": { "type": "Stone", "quantity": 78 },
+        "origin": "Los Santos",
+        "destination": "Zeist",
+        "distance": 4887
+      },
+      {
+        "packageId": 5,
+        "supplier": "Flashpoint",
+        "buyer": "Jabbercube",
+        "contents": { "type": "Steel", "quantity": 100 },
+        "origin": "Logung",
+        "destination": "Doāba",
+        "distance": 549
+      },
+      {
+        "packageId": 6,
+        "supplier": "Twimm",
+        "buyer": "Kamba",
+        "contents": { "type": "Brass", "quantity": 25 },
+        "origin": "Yŏnggwang-ŭp",
+        "destination": "Agdangan",
+        "distance": 955
+      },
+      {
+        "packageId": 7,
+        "supplier": "Feedfish",
+        "buyer": "Gabcube",
+        "contents": { "type": "Aluminum", "quantity": 91 },
+        "origin": "Крушево",
+        "destination": "Longmen",
+        "distance": 287
+      },
+      {
+        "packageId": 8,
+        "supplier": "Brainbox",
+        "buyer": "Jaxworks",
+        "contents": { "type": "Stone", "quantity": 5 },
+        "origin": "Voskop",
+        "destination": "Zheleznogorsk",
+        "distance": 4666
+      },
+      {
+        "packageId": 9,
+        "supplier": "Skidoo",
+        "buyer": "Innojam",
+        "contents": { "type": "Steel", "quantity": 47 },
+        "origin": "Waihibar",
+        "destination": "Kotaagung",
+        "distance": 1861
+      },
+      {
+        "packageId": 10,
+        "supplier": "Edgeify",
+        "buyer": "Kwimbee",
+        "contents": { "type": "Aluminum", "quantity": 10 },
+        "origin": "Na Wa",
+        "destination": "Sungaikupang",
+        "distance": 2892
+      }
+    ]
+  }
+]
