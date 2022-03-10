@@ -32,7 +32,7 @@ function Shipment(shipmentId, vehicle) {
   };
 }
 
-// Prototype function to add packages to
+// Prototype function to add packages to shipment.
 Shipment.prototype.AddPackage = function (package) {
   // TODO: see if we can use a pure function
   this.packages.push(package);
@@ -45,7 +45,7 @@ function createShipment(shipmentData, packageList) {
     shipmentData.shipmentId,
     shipmentData.vehicle
   );
-  // TODO: limit tpackages to 1 when vehicle == truck
+  // TODO: limit packages to 1 when vehicle == truck
   packageList.forEach((item) => {
     const newPackage = new Package(
       item.packageId,

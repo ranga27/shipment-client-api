@@ -1,0 +1,15 @@
+{
+  "shipmentId": 441079,
+  "vehicle": "rail",
+  "packages": [
+    {
+      "packageId": 101,
+      "supplier": "Jayo",
+      "buyer": "Skilith",
+      "contents": { "type": "Rubber", "quantity": 42 },
+      "origin": "Dongshangguan",
+      "destination": "Luotang",
+      "distance": 3742
+    }
+  ]
+}

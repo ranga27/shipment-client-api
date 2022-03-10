@@ -1,4 +1,4 @@
-const reportingMockData = require("../test/reportingMockData.json");
+const reportingMockData = require("../test/mockData.json");
 
 // Gets carbon emissions for a supplier passed as an argument from materdata
 function getCarbonEmissions(supplier, masterdata) {

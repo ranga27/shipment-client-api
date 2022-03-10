@@ -1,6 +1,6 @@
 const reportingMockData = require("../test/reportingMockData.json");
 
-// Retrurns shipment & packages for a supplier buyer pair
+// Returns shipment & packages for a supplier buyer pair
 function getShipmentsBySupplierBuyer(supplier, buyer, masterdata) {
   masterdata.forEach((shipment) => {
     shipment.packages.forEach((package) => {
