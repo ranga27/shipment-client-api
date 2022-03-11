@@ -32,7 +32,7 @@ The API's primary goal is to expose interfaces, functions and methods that aim t
 These endpoints allow you to handle the management of shipments packages and report on their attributes 
 
 ## Constraints
-- No backend DB is used. Instead, I have used the filesystem is used for ease of simplicity.
+- No backend database is used. Instead, I have used the filesystem for ease of simplicity.
 - Creation of empty shipments is not allowed. To create a shipment, adding at least one existing package is mandatory. Hence it would be best to create a package before creating a shipment.
 
 ## Test Data
@@ -44,8 +44,9 @@ I have provided Test data for testing the functionality of individual modules.
 - For Train Packages distances, distance are mutually exclusive since it's associated with a package and not shipment.
 
 ## Backlog/Roadmap
-- Updating an existing package within a shipment
-- Updating vehicle type in a shipment & associated validations 
+- Implementation - Updating an existing package within a shipment
+- Implementation - Updating vehicle type in a shipment & associated validations 
+- Implementation - Update all synchronous calls to asynchronous
 
 ## TODO
 - [ ] Error Handling
