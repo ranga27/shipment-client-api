@@ -1,9 +1,9 @@
-const reportingMockData = require("../test/mockData.json");
+const masterData = require("../data/mockData.json");
 
 // Gets carbon emissions for a supplier passed as an argument from materdata
-function getCarbonEmissions(supplier, masterdata) {
+function getCarbonEmissions(supplier) {
   let emissions = 0;
-  masterdata.forEach((shipment) => {
+  masterData.forEach((shipment) => {
     shipment.packages.forEach((package) => {
       if (package.supplier === supplier) {
         if (shipment.vehicle === "truck") {
@@ -18,8 +18,4 @@ function getCarbonEmissions(supplier, masterdata) {
   return emissions;
 }
 
-// Test function with mock data
-let supplier = "Yodel";
-let masterdata = reportingMockData;
-const carbonEmissions = getCarbonEmissions(supplier, masterdata);
-console.log("Total Carbon Emissions for", supplier, ":", carbonEmissions);
+module.exports = { getCarbonEmissions };

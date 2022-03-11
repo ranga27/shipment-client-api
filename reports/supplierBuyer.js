@@ -1,26 +1,22 @@
-const reportingMockData = require("../test/reportingMockData.json");
+const masterdata = require("../data/mockData.json");
 
 // Returns shipment & packages for a supplier buyer pair
-function getShipmentsBySupplierBuyer(supplier, buyer, masterdata) {
+// TODO: implement getPackage by props method
+function getShipmentsBySupplierBuyer(supplier, buyer) {
+  let shipments = [];
   masterdata.forEach((shipment) => {
     shipment.packages.forEach((package) => {
       if (package.supplier === supplier && package.buyer === buyer) {
-        console.log(
-          "Shipment ID with supplier,",
-          supplier,
-          "and buyer",
-          buyer,
-          ":",
-          shipment.shipmentId
-        );
-        console.log("Package in this shipment for this pair: ", package);
+        shipments.push(shipment);
       }
     });
   });
+  if (shipments.length > 0) {
+    return shipments;
+  } else {
+    // TODO: other error scenarios
+    throw Error(`No Shipment exists for this Supplier Buyer pair`);
+  }
 }
 
-// Test function
-let supplier = "Plambee";
-let buyer = "Quatz";
-let masterdata = reportingMockData;
-getShipmentsBySupplierBuyer(supplier, buyer, masterdata);
+module.exports = { getShipmentsBySupplierBuyer };

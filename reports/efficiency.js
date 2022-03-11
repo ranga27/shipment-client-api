@@ -1,11 +1,11 @@
-const reportingMockData = require("../test/reportingMockData.json");
+const masterData = require("../data/mockData.json");
 
 // Find efficiency for an individual supplier
-function getEfficiency(supplier, masterdata) {
+function getEfficiency(supplier) {
   let emissions = 0;
   let packages = 0;
   let efficiency = 0;
-  masterdata.forEach((shipment) => {
+  masterData.forEach((shipment) => {
     shipment.packages.forEach((package) => {
       if (package.supplier === supplier) {
         packages += 1;
@@ -24,9 +24,9 @@ function getEfficiency(supplier, masterdata) {
 }
 
 // Get a list of distinct suppliers from the provided dataset
-function getDistinctSuppliers(masterdata) {
+function getDistinctSuppliers() {
   let suppliers = [];
-  masterdata.forEach((shipment) => {
+  masterData.forEach((shipment) => {
     shipment.packages.forEach((package) => {
       if (!suppliers.includes(package.supplier))
         suppliers.push(package.supplier);
@@ -36,29 +36,21 @@ function getDistinctSuppliers(masterdata) {
 }
 
 // Compare efficiency for each supplier in the dataset
-function getEfficiencyStats(masterdata) {
+function getEfficiencyStats() {
   let efficientSupplier = "";
-  let efficiency = 0;
-  const suppliers = getDistinctSuppliers(masterdata);
+  let emissionEfficiency = 0;
+  const suppliers = getDistinctSuppliers();
   suppliers.forEach((supplier) => {
-    let supplierEfficiency = getEfficiency(supplier, masterdata);
-    if (efficiency === 0) {
-      efficiency = supplierEfficiency;
+    let supplierEfficiency = getEfficiency(supplier);
+    if (emissionEfficiency === 0) {
+      emissionEfficiency = supplierEfficiency;
       efficientSupplier = supplier;
-    } else if (efficiency > supplierEfficiency) {
-      efficiency = supplierEfficiency;
+    } else if (emissionEfficiency > supplierEfficiency) {
+      emissionEfficiency = supplierEfficiency;
       efficientSupplier = supplier;
     }
   });
-  return { efficientSupplier, efficiency };
+  return { efficientSupplier, emissionEfficiency };
 }
 
-// Test function with mock data
-let masterdata = reportingMockData;
-const { efficientSupplier, efficiency } = getEfficiencyStats(masterdata);
-console.log(
-  "The most efficient supplier is",
-  efficientSupplier,
-  "with an efficiency of:",
-  efficiency
-);
+module.exports = { getEfficiencyStats };

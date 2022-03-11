@@ -1,5 +1,4 @@
 const shipment = require("../models/shipment");
-const masterData = require("../data/testShipment.json");
 
 // Create New shipment data for updating existing shipment data
 const newShipment = {
@@ -17,7 +16,7 @@ const newShipment = {
   ],
 };
 try {
-  const updatedShipment = shipment.updateShipment(1, newShipment, masterData);
+  const updatedShipment = shipment.updateShipment(1, newShipment);
   console.log("Updated Shipment Data:", updatedShipment);
 } catch (error) {
   console.log(error.message);

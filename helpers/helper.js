@@ -1,8 +1,10 @@
 const fs = require("fs");
+const shipments = require("../data/testShipment.json");
 
-const getNewId = (array) => {
+// function to get new
+const getNewShipmentId = (array) => {
   if (array.length > 0) {
-    return array[array.length - 1].id + 1;
+    return array[array.length - 1].shipmentId + 1;
   } else {
     return 1;
   }
@@ -29,7 +31,7 @@ function writeJSONFile(filename, content) {
 }
 
 module.exports = {
-  getNewId,
+  getNewShipmentId,
   newDate,
   mustBeInArray,
   writeJSONFile,
