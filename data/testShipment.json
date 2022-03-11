@@ -1,15 +1,33 @@
-{
-  "shipmentId": 441079,
-  "vehicle": "rail",
-  "packages": [
-    {
-      "packageId": 101,
-      "supplier": "Jayo",
-      "buyer": "Skilith",
-      "contents": { "type": "Rubber", "quantity": 42 },
-      "origin": "Dongshangguan",
-      "destination": "Luotang",
-      "distance": 3742
-    }
-  ]
-}
+[
+  {
+    "shipmentId": 1,
+    "updatedAt": "Fri Mar 11 2022 12:40:12 GMT+0000 (Greenwich Mean Time)",
+    "vehicle": "rail",
+    "packages": [
+      {
+        "packageId": 1011,
+        "supplier": "Yodel",
+        "buyer": "Weebee",
+        "contents": { "type": "Copper", "quantity": 42 },
+        "origin": "Dongshangguan",
+        "destination": "Luotang",
+        "distance": 3742
+      }
+    ]
+  },
+  {
+    "shipmentId": 2,
+    "vehicle": "truck",
+    "packages": [
+      {
+        "packageId": 1,
+        "supplier": "Linktype",
+        "buyer": "Kare",
+        "contents": { "type": "Granite", "quantity": 20 },
+        "origin": "Krajan Satu",
+        "destination": "Casal Novo",
+        "distance": 1932
+      }
+    ]
+  }
+]
