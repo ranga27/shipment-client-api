@@ -1,10 +1,10 @@
-# Shipment Server
+# Shipment Client API
 
 ## Overview
-This is a bare-bones vanilla Node.js server module without the use of any frameworks. No NPM is used to avoid any third party libraries usage and thus minimal abstraction. It helps to focus on the core  funtionalities of server using bare minimum Node.js modules. 
+This Client API is a bare-bones vanilla Node.js module without any frameworks. I haven't used any third-party libraries and thus have minimal abstraction. It helps to focus on the core functionalities of the API using bare minimum Node.js modules. 
 
 ## Goal
-The primary goal of the server is to expose API interfaces using pure Node.js without external libraries or frameworks. The functions and methods aim to achieve the following for:
+The API's primary goal is to expose interfaces, functions and methods that aim to achieve the following:
 * Managing shipments and packages - simple CRUD
 * Reporting associated data with the shipments and packages
 
@@ -21,33 +21,32 @@ The primary goal of the server is to expose API interfaces using pure Node.js wi
   - Get Shipments by ID
   - Get Packages by ID
   - Update Shipment
-    - Update Vehicle Type
-    - Add Package to the Shipment
-  - Remove a Package from Shipment
+  - Add Package to a Shipment
+  - Remove a Package from a Shipment
 - Reporting
   - Shipments & Packages associated with a specific Supplier <-> Buyer pair
   - Carbon emissions for a specific supplier
-  - Most efficient supplier with respect to carbon emissions
+  - The most efficient supplier for carbon emissions
 
 ## API endpoints 
-These endpoints allow you to handle management of shipments, packages and reporting on their attributes 
+These endpoints allow you to handle the management of shipments packages and report on their attributes 
 
-## Constrains
-- No backend DB is used. Instead filesystem is used for ease of simplicity.
-- Creation of empty shipments is not allowed. To create a shipment its mandatory to add at least one existing package, hence a package should be created first.
+## Constraints
+- No backend DB is used. Instead, I have used the filesystem is used for ease of simplicity.
+- Creation of empty shipments is not allowed. To create a shipment, adding at least one existing package is mandatory. Hence it would be best to create a package before creating a shipment.
 
 ## Test Data
-Test data is provided for testing funcitonality of individual modules
+I have provided Test data for testing the functionality of individual modules.
 
 ## Assumptions
 - Shipment & Package Data is available in JSON format
 - Each shipment & each package are associated with a unique ID
-- For Train Packages distances, distance are mutually exclusive since its associated with a package and not shipment.
+- For Train Packages distances, distance are mutually exclusive since it's associated with a package and not shipment.
 
 ## Backlog/Roadmap
 - Updating an existing package within a shipment
+- Updating vehicle type in a shipment & associated validations 
 
 ## TODO
 - [ ] Error Handling
 - [ ] Improve Function Documentation
-
