@@ -20,16 +20,12 @@ The API's primary goal is to expose interfaces, functions and methods that aim t
   - Create Package
   - Get All Shipments
   - Get Shipments by ID
-  - Get Packages by Field values
   - Update Shipment
   - Delete Shipment
 - Reporting
   - Shipments & Packages associated with a specific Supplier <-> Buyer pair
   - Carbon emissions for a specific supplier
   - The most efficient supplier for carbon emissions
-
-## API endpoints 
-These endpoints allow you to handle the management of shipments packages and report on their attributes 
 
 ## Constraints
 - No backend database is used. Instead, I have used the filesystem for ease of simplicity.
@@ -46,11 +42,12 @@ I have provided Test data for testing the functionality of individual modules.
 ## Backlog/Roadmap
 - Updating an existing package within a shipment
 - Updating vehicle type in a shipment & associated validations 
-- Add Package to a Shipment
+- Add Package to an existing Shipment
 - Remove a Package from a Shipment
 - Update all synchronous calls to asynchronous
 - To not allow creation of empty shipments. To create a shipment, adding at least one existing package should be mandatory. Hence it would be best to create a package before creating a shipment.
+- Get Packages by Field values
 
 ## TODO
 - [ ] Error Handling
-- [ ] Improve Function Documentation
+- [ ] Improve function Documentation and Comments
