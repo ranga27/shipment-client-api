@@ -18,9 +18,9 @@ const server = http.createServer(async (req, res) => {
   // /api/shipments/:id : GET
   else if (req.url.match(/\/api\/shipment\/([0-9]+)/) && req.method === "GET") {
     try {
-      // get id from url
+      // get shipemntId from url
       const id = req.url.split("/")[3];
-      // get todo
+      // get shipment
       const shipment = new Shipment().getShipment(id);
       // set the status code and content-type
       res.writeHead(200, { "Content-Type": "application/json" });
@@ -33,12 +33,12 @@ const server = http.createServer(async (req, res) => {
       res.end(JSON.stringify({ message: error }));
     }
   }
-  // /api/shipments/:id : GET
+  // /api/package/:id : GET
   else if (req.url.match(/\/api\/package\/([0-9]+)/) && req.method === "GET") {
     try {
-      // get id from url
+      // get packageId from url
       const id = req.url.split("/")[3];
-      // get todo
+      // get package
       const package = new Package().getPackageByProp("packageId", id);
       // set the status code and content-type
       res.writeHead(200, { "Content-Type": "application/json" });
