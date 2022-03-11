@@ -46,6 +46,7 @@ I have provided Test data for testing the functionality of individual modules.
 ## Backlog/Roadmap
 - Updating an existing package within a shipment
 - Updating vehicle type in a shipment & associated validations 
+- Setting up the HTTP server and the REST API 
 
 ## TODO
 - [ ] Error Handling
